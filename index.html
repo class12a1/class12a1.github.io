@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="bg-gray-200">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tâm Tư 12A1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src='students.js'></script>
+    <style>
+        body {
+            background-image: url("assets/bg_top.png");
+        	background-repeat: no-repeat;
+  			background-size: contain;
+  			background-position: right top;
+        }
+        .popupbox {
+        	background-image: url("assets/heart.png"), url("assets/star.png");
+        	background-repeat: no-repeat;
+  			background-position: left top, right top;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="togglePopup()" id="dim" class="dim invisible duration-300 transition-all opacity-0"></div>
+    <div id="popup" class="no-scrollbar popup invisible duration-300 transition-all opacity-0" >
+        <div id="popupbox" class="popupbox bg-40px md:bg-50px p-7 pb-0 h-full flex flex-col justify-between">
+            <div id="contents" class="my-auto flex-wrap">
+            </div>
+            <div class="py-5">
+            	<div id="info" class="text-center mx-auto name"></div>
+                <div id="fullname" class="text-center name mx-auto"></div>
+                <div id="deco">
+                    <img src="assets/deco.svg" class="h-4 mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-3 select-none iOS">        
+        <nav>
+            <span onclick="showMessage(0)" class=" from-green-400 to-blue-500 text-xl md:text-3xl bg-clip-text font-bold text-transparent bg-gradient-to-r ">
+                Lớp 12A1
+            </span>
+        </nav>
+        <div class="flex justify-start ml-5 sm:ml-17 my-7 md:my-10">
+            <span onclick="showMessage(40)" class="teacher px-3 sm:px-10 py-5 md:py-10 font-semibold">
+                Bàn Giáo Viên
+            </span>
+        </div>
+        <div class="grid grid-cols-4 gap-2 lg:gap-10">
+            <div id="group1" class="grid gap-1 lg:gap-4 grid-rows-6 grid-cols-2">
+            </div>
+            <div class="grid gap-1 lg:gap-4 col-span-2 grid-cols-2">
+                <div id="group2" class="grid gap-1 lg:gap-4 grid-rows-6 grid-cols-2">
+                </div>
+                <div id="group3" class="grid gap-1 lg:gap-4 grid-rows-6 grid-cols-2">
+                </div>
+            </div>
+            <div id="group4" class="grid gap-1 lg:gap-4 grid-rows-6 grid-cols-2">      
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src='index.js'></script>
+</html>
